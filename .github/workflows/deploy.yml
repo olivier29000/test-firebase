@@ -13,6 +13,6 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm i -g firebase-tools
-      - run: firebase deploy --only hosting,functions --project test-cesi
+      - run: firebase deploy --only hosting --project test-cesi
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
